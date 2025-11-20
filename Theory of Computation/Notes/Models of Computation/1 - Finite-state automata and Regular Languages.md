@@ -84,6 +84,32 @@ This essentially means repeat words from $A$ any number of times, even zero. So,
 Then
 $A^* = \{\epsilon, \text{"ab", "abab", "ababab", ...}\}$
 
+### Non-deterministic Finite Automaton
+
+The only difference in definition of this compared to a DFA is that the transition function is now: $$
+\delta:Q*(\Sigma \cup\{\epsilon\})\to \mathcal{P}(Q)
+$$Where $\mathcal{P}(S)$ means the power set of $S$.
+This is an example of a NFA:
+![[Pasted image 20251013102203.png]]
+However, this NFA has 3 potential problems,
+- More than 1 next possible state (in $q_{1}$ read 1).
+- $\epsilon$-transition (in $q_{2}$, and the next symbol is $0$).
+- No "next" state (in $q_{3}$ read $0$): the computation hangs, i.e. ends before the input has been exhausted.
+
+Note: $\epsilon$ is not a letter from the alphabet; it means go straight away to that state and postpone reading the next input symbol.
+
+Note 2: $\epsilon$'s can be freely added inside the actual word $\in$ $\Sigma$*, eg. 010110 can be viewed as: $\epsilon01\epsilon\epsilon 01\epsilon 10$.
+
+So basically, non-deterministic computation just means trying all the possible paths and accept if and only if at least one accepts.
+
+### Converting a NFA into a DFA
+
+Fill this in tonight
+
+
+
+### Closure under Regular Operations
+
 
 
 
