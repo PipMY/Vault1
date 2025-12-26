@@ -110,11 +110,7 @@ Fill this in tonight
 
 ### Closure under Regular Operations
 
-
-
-
-
-
+Finish writing here
 
 
 
